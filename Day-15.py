@@ -36,7 +36,7 @@ prime_(n)
 name("kartheek","Kumar","Ravi")
 name(67,89,45)
 <---------------------------------------------------------------------------------------------------------------------------------------------------->
-
+'''
 def Prime_num(num,count):
     for i in range(1,num+1):
         if num % i == 0:
@@ -47,6 +47,6 @@ def Prime_num(num,count):
         print(f"{num} is not a Prime Number")
 Prime_num(num = int(input("Enter the Number: ")), count = 0)#key Word arguments - as like dictionary here we have key and value directly in the argyments
 
-'''
+
 
 

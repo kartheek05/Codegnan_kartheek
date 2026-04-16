@@ -85,7 +85,7 @@ else:
 #print(some.replace("programing","nrml"))
 
 some  = input("Enter the Alphabet: ")
-if "a,e,i,o,u" in some:
+if some in "aeiouAEIOU":
     print("Vowel")
 else:
     print("Consonant")

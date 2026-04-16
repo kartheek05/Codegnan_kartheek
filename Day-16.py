@@ -58,7 +58,7 @@ HDFC_User_Pin = input("Please Enter your 4 digit ATM Pin: ")
 if len(HDFC_User_Pin) == 4:
     if HDFC_User_Pin in HDFC_KK_AC_det['Pin']:
         print("Correct Pin")
-        User_choice = int(input("Enter  \n1.Withdraw: \n2.Deposite"))
+        User_choice = int(input("Enter  \n1.Withdraw: \n2.Deposite \n3.Pin Change"))
         if User_choice == 1:
             money_w = int(input("Enter The Amount: "))
             if money_w <= HDFC_KK_AC_det['Balance']:
@@ -73,6 +73,25 @@ if len(HDFC_User_Pin) == 4:
                 print(f"You have deposited {Deposite_M} and The Balance is {HDFC_KK_AC_det['Balance']}")
             else:
                 print(f"Please Enter the Valid Amount or Minimun Amount {Deposite_M}")
+        elif User_choice == 3:
+            attempts = 3
+            while attempts > 0:
+                check_pin = input("Enter the old PIN")
+                if check_pin == HDFC_KK_AC_det['Pin']:
+                    New_PIN = input("Enter the NEW PIN: ")
+                    if len(New_PIN ) == 4:
+                        if HDFC_KK_AC_det['Pin'] != New_PIN:
+                            HDFC_KK_AC_det['Pin'] = New_PIN
+                            print(f"PIN changed Done {HDFC_KK_AC_det['Pin']}")
+                        else:
+                            print("The NEW PIN shouldn't be the OLD PIN")
+                    else:
+                            print(f"Please Entre 4 Digit PIN {New_PIN}")
+                else:
+                    attempts -= 1
+                    print(f"Please Enter the Correct OLD PIN \n you Have entered the worng PIN{check_pin} and \nThe NO.Of Attempts {attempts}")
+            if attempts == 0:
+                print("Please contact the Customers Care you have Reached the Limit")
     else:
         print("Enter Correct PIN")
 else:

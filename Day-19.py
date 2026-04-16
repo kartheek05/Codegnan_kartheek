@@ -26,7 +26,25 @@ import math
 print(math.sqrt(16))                                                  
 '''
 import random
-print(num)
+number = random.randint(1,10)
+attempts = 3
+while attempts > 0:
+    user_num = int(input("Guess the number between 1 to 10 : "))
+    if user_num == number:
+        print("\nCongrants! You guessed it right")
+        break
+    else:
+        attempts -= 1
+        print(f"\nWrong Guess! Try again. Attempts remaining {attempts}\n")
+        if attempts > 0:
+            if  num > user_num :
+                print("Hint : Guessed Number is more than Actual Number\n")
+            else:
+                print("Hint : Guessed Number is less than Actual Number\n")
+if attempts <= 0:
+    print(f"The number is {num}")
+        
+
 
 
 

@@ -41,15 +41,17 @@ while True:
                     money_w = int(input("Enter The Amount: "))
                     if money_w <= HDFC_KK_AC_det['Balance']:
                         HDFC_KK_AC_det['Balance'] -= money_w
-                        HDFC_KK_AC_det['History'] . append(f"Withdraw amount : {money_w}")
+                        HDFC_KK_AC_det['History'].append(f"Withdraw amount {money_w}")
                         print(f"Balance amount is: {HDFC_KK_AC_det['Balance']}")
+                        print(HDFC_KK_AC_det['History'])
                     else:
                         print("INSUFFICIENT FUNDS")
                 elif User_choice == 2:
                     Deposite_M = int(input("Enter the Deposite Amount: "))
                     if Deposite_M % 100 == 0 and Deposite_M >= 500:
                         HDFC_KK_AC_det['Balance'] += Deposite_M
-                        HDFC_KK_AC_det['History'] . append(f"Deposited amount : {Deposite_M}")
+                        HDFC_KK_AC_det['History'].append(f"Deposited money {Deposite_M}")
+                        print(HDFC_KK_AC_det['History'])
                         print(f"You have deposited {Deposite_M} and The Balance is {HDFC_KK_AC_det['Balance']}")
                     else:
                         print(f"Please Enter the Valid Amount or Minimun Amount {Deposite_M}")

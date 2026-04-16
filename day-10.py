@@ -73,7 +73,32 @@ if Amstr == so:
     print(f"{so} is a Amstrong Num")
 else:
     print(f"{so} is not a Amstrong Num")
-'''   
+'''
+<---------------------------------------------------------------------------------------------------->
 # Take a list only with integers add all even numbers and add all the even numbers
+list_ = [22,44,5,6,88,45,6,89,90,23,4]
+odd = []
+even  = []
+for j in list_:
+    if j % 2 == 0:
+        even.append(j)
+    else:
+        odd.append(j)
+print(f"The Sum of even numbers are {sum(even)}")
+print(f"The Sum of odd numbers are {sum(odd)}")
+<---------------------------------------------------------------------------------------------------->
+# Take a list only with integers add all even numbers and add all the even numbers
+list_ = [22,44,5,6,88,45,6,89,90,23,4]
+even_ = 0
+odd_ = 0
+for i in list_:
+    if i % 2 == 0:
+        even_ += i
+    else:
+        odd_ += i
+print(f"The sum Even Numbers are {even_} and Odd Numbers are {odd_}")
+        
 
+    
+        
         
